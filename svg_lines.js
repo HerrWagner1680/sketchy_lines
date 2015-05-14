@@ -1,14 +1,23 @@
-function randLINE(xLEFT, xRIGHT, yAve, minW, maxW, everyxCHANGE, maxSKEW){
+function randLINE(xLEFT, xRIGHT, yAve, minW, maxW, everyxCHANGE, maxSKEW, numLINES){
+	console.log(numLINES);
 
-	var try1 = xArr(xLEFT, xRIGHT, everyxCHANGE, maxSKEW);
-	var try2 = xArr(xLEFT, xRIGHT, everyxCHANGE, maxSKEW);
-	allX = try1.concat(try2.reverse());
-	var arrLENGT = try1.length
+	// for (i = 0; i < numLINES; i++) {
+		var try1 = xArr(xLEFT, xRIGHT, everyxCHANGE, maxSKEW);
+		var try2 = xArr(xLEFT, xRIGHT, everyxCHANGE, maxSKEW);
+		allX = try1.concat(try2.reverse());
+		var arrLENGT = try1.length
 
-	yPOSnon(yAve, minW, maxW, arrLENGT);
+		yPOSnon(yAve, minW, maxW, arrLENGT);
 
-	//console.log("allX is: " + allX + " allY is: " + allY);
-	comboXY();
+		//reset yAve to proper setting after first run
+		//var yAve = parseFloat(document.getElementById("in_yave").value)
+		//console.log("allX is: " + allX + " allY is: " + allY);
+		comboXY();
+
+		console.log(i);
+	// }
+
+
 };
 
 
@@ -83,10 +92,12 @@ function comboXY(){
 		completeXY += JSON.stringify(allX[i]) + "," + JSON.stringify(allY[i]) +  " ";
 	}
 	console.log(completeXY);
-	var pol = "<polyline points="
-	var sty = 'style="stroke:#222;"/>'
-	fullpoly = pol + '"' + completeXY + '"' + sty
-	console.log("full poly: " + fullpoly);
+	// var pol = "<polyline points="
+	// var sty = 'style="stroke:#222;"/>'
+	// fullpoly = pol + '"' + completeXY + '"' + sty
+	// console.log("full poly: " + fullpoly);
+
+	drawLINE(completeXY);
 };
 
 // REM to keep shifting your imput numbers of else random line will be in same area each time

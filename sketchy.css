@@ -48,11 +48,11 @@ div#results {
 
 svg {
 	display: block;
-	height: 100px;
+	height: 300px;
 	width: 500px;
 }
 
-#lin_3 {
+/*#lin_3 {
 	stroke: green;
 	stroke-width: 15px;
-}
+}*/

@@ -13,21 +13,7 @@
 		<h4><i> great for a hand-drawn look </i></h4>
 		<h4> all lines drawn are horizontal </h4>
 <h5></h5>
-<!-- 		<h5> could always override by typing in... if too high show error </h5>
-<h5></h5>
-		<h5> EXAMPLE - anything over 2000 in xright - auto error - same x node</h5>
-<h5></h5>
-		<h5> yave max would be 500 // minw and maxw no more than 50</h5>
-<h5></h5>
-		<h5> number of lines should be based on the pixel height of a browser
-		anything beyond 1.5 of 2 browser heights is too much...but the height would have to be calculated using yAve and minW..
-		So, if yave=1 and min width is 0.2 ... average browser height, say is 800. That gives you 5 x 800 lines!
-		</h5> -->
 
-<!-- <h5></h5>
-<h5></h5>
-<h5></h5>
- -->
 
 		<span id="xleft">xLEFT is a default - no slider</span>
 <h5></h5>
@@ -38,13 +24,13 @@
 <h5></h5>
 <!-- 		<span id="minw">minW goes from 0.2 to 10</span> -->
 		<span class="block">minimum width</span>		
-		<input id="in_minw" type="range" min="0.2" max="10" value="4" step="0.2" onchange="showValueMINW(this.value)" />
-		<span id="minw">4</span>
+		<input id="in_minw" type="range" min="0.2" max="10" value="2" step="0.2" onchange="showValueMINW(this.value)" />
+		<span id="minw">2</span>
 <h5></h5>
 <!-- 		<span id="maxw">maxW goes from 0.2 to 20</span> -->
 		<span class="block">maximum width</span>
-		<input id="in_maxw" type="range" min="0.2" max="20" value="4" step="0.2" onchange="showValueMAXW(this.value)" />
-		<span id="maxw">4</span>
+		<input id="in_maxw" type="range" min="0.2" max="20" value="5" step="0.2" onchange="showValueMAXW(this.value)" />
+		<span id="maxw">5</span>
 <h5></h5>
 
 <!-- 		<span id="yave">yAVE goes from 1 to 100px</span> -->
@@ -99,6 +85,12 @@
 			document.getElementById("x_skew").innerHTML=newValue;
 		}
 
+		    
+
+		//global variable
+
+		maxRIGHT = document.getElementById("in_xright").value;
+		
 
 		// document.getElementById("draw").addEventListener("click", myFunction);
 
@@ -150,31 +142,23 @@
 	<div id="results"> THIS IS THE RESULTS DIV </div>
 
 
-
-		<p>X LEFT position (probably a default)</p>
-	<p>X RIGHT position (aka width of line)</p>
-
-
 	<svg id="svg_1">
 <!-- 	<svg xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"> -->
-	  <line class="lin" id="lin_1" x1="10" y1="0" x2="300" y2="0" style="stroke:rgb(255,0,0);stroke-width:10" />
+<!-- 	  <line class="lin" id="lin_1" x1="10" y1="0" x2="300" y2="0" style="stroke:rgb(255,0,0);stroke-width:10" />
 	  <line class="lin" id="lin_2" x1="10" y1="20" x2="300" y2="20" style="stroke:blue;stroke-width:10" />
-	  <line class="lin" id="lin_3" x1="10" y1="50" x2="300" y2="50"/>
+	  <line class="lin" id="lin_3" x1="10" y1="50" x2="300" y2="50"/> -->
 
-	  <polyline class="lin" id="poly_1" points="10,70 " + maxRIGHT +",70 "+ maxRIGHT +",80 10,80" style="stroke:#222;"/>
+	  <polyline class="lin" id="poly_1" points="10,20 300,20 300,10 10,10" style="stroke:#222;"/>
+
+<!-- 	  <polyline class="lin" id="poly_2" points="10,30 300,30 300,35 10,35" style="stroke:#222;"/> -->
+
+
+
 	   Sorry, your browser does not support inline SVG. 
 	</svg> 
 	<p> *** NUMBER OF LINES ... number of loops performed</p>
 
-	<p> Y average .... vertical position of each line .. on average </p>
-
-	<p> *** Y proximity .... spacing between Y average positions</p>
-
-	<p> everyXCHANGE .... how far apart X "nodes" are on average</p>
-	<p> skew ..... randomness skew involved max right or left divergence from everyXCHANGE </p>
-
-	<h5>*** means not yet included in JS functions</h5>
 
 
 
