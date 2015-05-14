@@ -60,3 +60,8 @@ svg {
 	stroke: green;
 	stroke-width: 15px;
 }*/
+
+#swipeBox {
+	height: 100px;
+	width: 200px;
+}

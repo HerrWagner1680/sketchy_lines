@@ -5,6 +5,37 @@
 	<link rel="stylesheet" href="sketchy.css">
       <script type="text/javascript" src="sketchy.js"></script> 
       <script type="text/javascript" src="svg_lines.js"></script> 
+		<script type="text/javascript">
+			// TOUCH-EVENTS SINGLE-FINGER SWIPE-SENSING JAVASCRIPT
+			// Courtesy of PADILICIOUS.COM and MACOSXAUTOMATION.COM
+		
+			var fingerCount = 0;
+			var startX = 0;
+			
+			function processingRoutine() {
+				var swipedElement = document.getElementById(triggerElementID);
+				if ( swipeDirection == 'left' ) {
+					myFunction();
+					// REPLACE WITH YOUR ROUTINES
+					swipedElement.style.backgroundColor = 'orange';
+				} else if ( swipeDirection == 'right' ) {
+					myFunction();
+					// REPLACE WITH YOUR ROUTINES
+					swipedElement.style.backgroundColor = 'green';
+				} else if ( swipeDirection == 'up' ) {
+					myFunction();
+					// REPLACE WITH YOUR ROUTINES
+					swipedElement.style.backgroundColor = 'maroon';
+				} else if ( swipeDirection == 'down' ) {
+					myFunction();
+					// REPLACE WITH YOUR ROUTINES
+					swipedElement.style.backgroundColor = 'purple';
+				}
+			}
+			
+		</script>
+
+
 </head>
 <body>
 
@@ -115,6 +146,7 @@
 			<input type='text' id='holeRange3' size='2' value='0' readonly/></div> -->
 
 		<div id="draw" onclick="myFunction()">DRAW</div>
+		<div id="swipeBox" ontouchstart="touchStart(event,'swipeBox');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"></div>
 	</header>
 
 
