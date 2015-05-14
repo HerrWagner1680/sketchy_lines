@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Sketchy Lines</title>
+<link rel="stylesheet" href="sketchy.css">
+</head>
+<body>
+
+	<header>
+		<h1> Sketchy Parallel Lines </h1>
+		<h3><i> great for a hand-drawn look </i></h3>
+<h5></h5>
+
+		<h4> all lines drawn are horizontal </h4>
+<h5></h5>
+		<h5> could always override by typing in... if too high show error </h5>
+<h5></h5>
+		<h5> EXAMPLE - anything over 2000 in xright - auto error - same x node</h5>
+<h5></h5>
+		<h5> yave max would be 500 // minw and maxw no more than 50</h5>
+<h5></h5>
+		<h5> number of lines should be based on the pixel height of a browser
+		anything beyond 1.5 of 2 browser heights is too much...but the height would have to be calculated using yAve and minW..
+		So, if yave=1 and min width is 0.2 ... average browser height, say is 800. That gives you 5 x 800 lines!
+		</h5>
+
+<h5></h5>
+<h5></h5>
+<h5></h5>
+
+
+		<span id="xleft">xLEFT is a default - no slider</span>
+<h5></h5>
+		<span id="xright">xRIGHT goes from 10px to 1000px</span>
+<h5></h5>
+		<span id="minw">minW goes from 0.2 to 10</span>
+<h5></h5>
+		<span id="maxw">maxW goes from 0.2 to 20</span>
+<h5></h5>
+		<span id="x_node_spac">everyXchange goes from 5px to xright amt... dist 'tween zigs and zags</span>
+<h5></h5>
+		<span id="x_skew">skew max is rounded down integer of half node space...maybe use modulus.... randomly skewing zigs and zags</span>
+<h5></h5>
+		<span id="yave">yAVE goes from 1 to 100px</span>
+<h5></h5>
+		<span id="num_lines">number of lines goes from 1 to 1000</span>
+
+
+
+
+		<span id='rot'><label for='slider3'> Degrees of rotation: -180 
+			</label><input id='slider3' type ='range' min ='-180' max='180' step ='10' value='0'/> 180 
+			<input type='text' id='rangeValue3' size='4' value='0' readonly/></span>
+
+
+		<input type="range" min="0" max="50" value="0" step="5" onchange="showValue(this.value)" />
+		<span id="range">0</span>
+
+		<script type="text/javascript">
+		function showValue(newValue)
+		{
+			document.getElementById("range").innerHTML=newValue;
+			document.getElementById("rot").val=newValue;
+		}
+		</script>
+
+		<input type="button" onclick="alert('Hello World!')" value="Draw">
+		<!-- <input type="button" onclick="alert('Hello World!')" value="OUTPUT TO PNG">  -->
+
+		<div><label for='piehole3'> Donut hole (range 0 - 0.9 of radius): </label> 0.0 
+				<input id='piehole3' type='range' min ='0' max='0.9' step='0.05' value='0'/> 0.9 
+			<input type='text' id='holeRange3' size='2' value='0' readonly/></div>
+	</header>
+
+
+	<!-- to change value in window of rotation
+	document.getElementById("rangeValue3").value = 34   -->
+
+	<!-- to find out value of slider 3
+	document.getElementById("slider3").value   -->
+
+	<div class="long">
+	<p>X LEFT position (probably a default)</p>
+	<p>X RIGHT position (aka width of line)</p>
+
+	<p> *** NUMBER OF LINES ... number of loops performed</p>
+
+	<p> Y average .... vertical position of each line .. on average </p>
+
+	<p> *** Y proximity .... spacing between Y average positions</p>
+
+	<p> everyXCHANGE .... how far apart X "nodes" are on average</p>
+	<p> skew ..... randomness skew involved max right or left divergence from everyXCHANGE </p>
+
+	<h5>*** means not yet included in JS functions</h5>
+
+
+		<p>X LEFT position (probably a default)</p>
+	<p>X RIGHT position (aka width of line)</p>
+
+	<p> *** NUMBER OF LINES ... number of loops performed</p>
+
+	<p> Y average .... vertical position of each line .. on average </p>
+
+	<p> *** Y proximity .... spacing between Y average positions</p>
+
+	<p> everyXCHANGE .... how far apart X "nodes" are on average</p>
+	<p> skew ..... randomness skew involved max right or left divergence from everyXCHANGE </p>
+
+	<h5>*** means not yet included in JS functions</h5>
+
+
+
+
+		<p>X LEFT position (probably a default)</p>
+	<p>X RIGHT position (aka width of line)</p>
+
+	<p> *** NUMBER OF LINES ... number of loops performed</p>
+
+	<p> Y average .... vertical position of each line .. on average </p>
+
+	<p> *** Y proximity .... spacing between Y average positions</p>
+
+	<p> everyXCHANGE .... how far apart X "nodes" are on average</p>
+	<p> skew ..... randomness skew involved max right or left divergence from everyXCHANGE </p>
+
+	<h5>*** means not yet included in JS functions</h5>
+
+
+
+		<p>X LEFT position (probably a default)</p>
+	<p>X RIGHT position (aka width of line)</p>
+
+	<p> *** NUMBER OF LINES ... number of loops performed</p>
+
+	<p> Y average .... vertical position of each line .. on average </p>
+
+	<p> *** Y proximity .... spacing between Y average positions</p>
+
+	<p> everyXCHANGE .... how far apart X "nodes" are on average</p>
+	<p> skew ..... randomness skew involved max right or left divergence from everyXCHANGE..skewing/randomizing zig-zag distance </p>
+
+	<h5>*** means not yet included in JS functions</h5>
+
+	</div>
+
+</body>
+</html>

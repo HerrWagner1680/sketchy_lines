@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+	margin-top: -18px;
+}
+
+header {
+/*	position: fixed;*/
+	float: left;
+	background-color: #D2B48C;
+	width: 350px;
+	height: 600px;
+	margin-top: 0px;
+	padding: 5px;
+}
+
+.long {
+/*	margin-top: 0px;
+	margin-left: 350px;*/
+	float: left;
+/*	background-color: red;
+	width: 700px;
+	height: 1000px;*/
+}
