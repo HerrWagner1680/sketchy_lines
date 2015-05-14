@@ -15,12 +15,12 @@
 <h5></h5>
 
 
-		<span id="xleft">xLEFT is a default - no slider</span>
+		<!-- <span id="xleft">xLEFT is a default - no slider</span> -->
 <h5></h5>
 <!-- 		<span class="block" id="xright">xRIGHT goes from 10px to 1000px</span> -->
 		<span class="block">length of horizontal line</span>
-		<input id="in_xright" type="range" min="10" max="1000" value="300" step="10" onchange="showValueXRIGHT(this.value)" />
-		<span id="xright">300</span>
+		<input id="in_xright" type="range" min="10" max="1000" value="500" step="10" onchange="showValueXRIGHT(this.value)" />
+		<span id="xright">500</span>
 <h5></h5>
 <!-- 		<span id="minw">minW goes from 0.2 to 10</span> -->
 		<span class="block">minimum width</span>		
@@ -35,12 +35,12 @@
 
 <!-- 		<span id="yave">yAVE goes from 1 to 100px</span> -->
 		<span class="block">distance between lines on y-axis</span>
-		<input id="in_yave" type="range" min="1" max="100" value="10" step="1" onchange="showValueYAVE(this.value)" />
+		<input id="in_yave" type="range" min="1" max="30" value="10" step="1" onchange="showValueYAVE(this.value)" />
 		<span id="yave">10</span>
 <h5></h5>
 <!-- 		<span id="num_lines">number of lines goes from 5 to 1000</span> -->
 		<span class="block">number of lines</span>
-		<input id="in_num_lines" type="range" min="5" max="1000" value="40" step="5" onchange="showValueNUML(this.value)" />
+		<input id="in_num_lines" type="range" min="5" max="200" value="40" step="5" onchange="showValueNUML(this.value)" />
 		<span id="num_lines">40</span>
 <h6></h6>
 <!-- 		<span id="x_node_spac">everyXchange goes from 5px to xright amt... dist 'tween zigs and zags</span> -->
@@ -125,7 +125,7 @@
 	document.getElementById("slider3").value   -->
 
 	<div class="long">
-	<p>X LEFT position (probably a default)</p>
+<!-- 	<p>X LEFT position (probably a default)</p>
 	<p>X RIGHT position (aka width of line)</p>
 
 	<p> *** NUMBER OF LINES ... number of loops performed</p>
@@ -137,27 +137,22 @@
 	<p> everyXCHANGE .... how far apart X "nodes" are on average</p>
 	<p> skew ..... randomness skew involved max right or left divergence from everyXCHANGE </p>
 
-	<h5>*** means not yet included in JS functions</h5>
+	<h5>*** means not yet included in JS functions</h5> -->
 
 	<div id="results"> THIS IS THE RESULTS DIV </div>
 
 
-	<svg id="svg_1">
-<!-- 	<svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"> -->
+<!-- 	<svg id="svg_1"> -->
+	<svg id="svg_1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
 <!-- 	  <line class="lin" id="lin_1" x1="10" y1="0" x2="300" y2="0" style="stroke:rgb(255,0,0);stroke-width:10" />
 	  <line class="lin" id="lin_2" x1="10" y1="20" x2="300" y2="20" style="stroke:blue;stroke-width:10" />
 	  <line class="lin" id="lin_3" x1="10" y1="50" x2="300" y2="50"/> -->
 
-	  <polyline class="lin" id="poly_1" points="10,20 300,20 300,10 10,10" style="stroke:#222;"/>
-
-<!-- 	  <polyline class="lin" id="poly_2" points="10,30 300,30 300,35 10,35" style="stroke:#222;"/> -->
-
-
-
+	  <polyline class="lin" id="poly_1" points="0,0 300,0 300,0 0,0" style="stroke:#fff"/>
 	   Sorry, your browser does not support inline SVG. 
 	</svg> 
-	<p> *** NUMBER OF LINES ... number of loops performed</p>
+<!-- 	<p> *** NUMBER OF LINES ... number of loops performed</p> -->
 
 
 

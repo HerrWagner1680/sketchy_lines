@@ -16,6 +16,20 @@ function addLINES(){
 	var lines_to_add = document.getElementById("num_lines").innerHTML - document.getElementsByClassName("lin").length;
 	console.log("num of lines to add: " + lines_to_add);
 
+	var poly_length = document.getElementsByTagName("polyline").length
+
+	if (poly_length >= 2 | poly_length == undefined){ 
+
+		var node = document.getElementById("poly_2");
+			// var elem = document.createElement("polyline");
+		var elem = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+		node.parentNode.insertBefore(elem,node.nextSibling);
+		
+		for (q = 0; q < poly_length; q++) {
+			document.getElementsByTagName("polyline")[1].remove();
+		};
+	};
+
 	// var nnn = document.getElementsByTagName("polyline").length
 	// var node = document.getElementById("poly_" + nnn);
 	// // var elem = document.createElement("polyline");
