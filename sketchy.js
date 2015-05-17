@@ -9,7 +9,7 @@ function updateLINE(maxRIGHT,maxWIDTH){
 
 function addLINES(){
 	var lines_to_add = document.getElementById("num_lines").innerHTML - document.getElementsByClassName("lin").length + 1;
-	console.log("num of lines to add: " + lines_to_add);
+	// console.log("num of lines to add: " + lines_to_add);
 
 	var poly_length = document.getElementsByTagName("polyline").length
 
@@ -83,13 +83,13 @@ function addLINES(){
 
 		//CREATE THE POLYGON GAPS, IF ANY
 
-		console.log("number of polygons in this here liney " + numPOLYGONS)
+		// console.log("number of polygons in this here liney " + numPOLYGONS)
 
 		whiteOUT(polyGAPS, numPOLYGONS)
 		//console.log("COMPLETEXY" + completeXY)
 		console.log(z);
 	};
-	console.log("loopy done");
+	// console.log("loopy done");
 };
 
 function drawLINE(completeXY, polyGAPS){
@@ -114,7 +114,8 @@ function whiteOUT(polyGAPS, numPOLYGONS){
 
 			// pg_length = polyGAPS.length
 			var pg = polyGAPS.slice(-1)[0]
-
+			console.log("pg " + pg)
+			if (pg === undefined){ console.log("a problem..."); return false }
 			node.setAttribute("points", pg);
 			node.setAttribute("class", "whiteout");
 			polyGAPS.splice(-1)[0]

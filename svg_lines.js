@@ -1,6 +1,6 @@
 function randLINE(xLEFT, xRIGHT, yAve, minW, maxW, everyxCHANGE, maxSKEW, numLINES, gaps){
-	console.log(numLINES);
-	console.log("gaps " + gaps)
+	// console.log(numLINES);
+	// console.log("gaps " + gaps)
 
 	// for (i = 0; i < numLINES; i++) {
 		var try1 = xArr(xLEFT, xRIGHT, everyxCHANGE, maxSKEW);
@@ -15,7 +15,7 @@ function randLINE(xLEFT, xRIGHT, yAve, minW, maxW, everyxCHANGE, maxSKEW, numLIN
 		//console.log("allX is: " + allX + " allY is: " + allY);
 		comboXY();
 
-		console.log(i);
+		// console.log(i);
 	// }
 };
 
@@ -46,7 +46,7 @@ function xArr(xLEFT, xRIGHT, everyxCHANGE, maxSKEW){
 			myArr.push(xRIGHT + rounded_tenth);
 		}
 
-	console.log("myArr length " + myArr.length)
+	// console.log("myArr length " + myArr.length)
 	return myArr;
 };
 
@@ -97,8 +97,8 @@ function yPOSnon(yAve, minW, maxW, arrLENGT, gaps){
 
 	allY = topY.concat(bottomY.reverse());
 
-	console.log("whiteout array " + whiteoutPOS)
-	console.log("POS2 " + whiteoutPOS2)
+	// console.log("whiteout array " + whiteoutPOS)
+	// console.log("POS2 " + whiteoutPOS2)
 
 	potentialGAPS = []
 	numPOLYGONS = 0
@@ -107,11 +107,11 @@ function yPOSnon(yAve, minW, maxW, arrLENGT, gaps){
 		if(whiteoutPOS[i-1] == whiteoutPOS[i]-1){
 			// console.log("check out spots " + (i-1) + " and " + i)
 			potentialGAPS.push(whiteoutPOS[i-1])
-			console.log("potentialGAPS variable ... REAL GAPS start #s  " + potentialGAPS)
+			// console.log("potentialGAPS variable ... REAL GAPS start #s  " + potentialGAPS)
 			numPOLYGONS = numPOLYGONS + 1
 		}
 	}
-	console.log("num of polygons in line " + numPOLYGONS)
+	// console.log("num of polygons in line " + numPOLYGONS)
 	// console.log("length of allY " + allY.length)
 	// console.log(" zero pos of allY " + allY[0])
 	// console.log(" one pos of allY " + allY[1])
@@ -133,28 +133,28 @@ function comboXY(){
 //		completeXY.concat(allX[i] + allY[i])
 		completeXY += JSON.stringify(allX[i]) + "," + JSON.stringify(allY[i]) +  " ";
 	}
-	console.log(completeXY);
+	// console.log(completeXY);
 	// whiteout = []
 	polyGAPS = 0  // polygon array for gaps
 	if (typeof potentialGAPS !== "object" && potentialGAPS.length === "undefined" ){
 			drawLINE(completeXY, polyGAPS);
 		} else {		
-			console.log("potentialgaps " + potentialGAPS)
-			console.log(typeof potentialGAPS[0]);
-						console.log(typeof potentialGAPS);
+			// console.log("potentialgaps " + potentialGAPS)
+			// console.log(typeof potentialGAPS[0]);
+			// 			console.log(typeof potentialGAPS);
 			// ggg = potentialGAPS[0].split(" ");
 
 			polyGAPS = []
 		for (i=0; i<= parseInt(numPOLYGONS) - 1; i++){
 			ggg = parseInt(potentialGAPS[i])
-			console.log("ggg " + ggg)
+			// console.log("ggg " + ggg)
 			qqq = completeXY.split(" ");
 		
 			polyGAPS.push(qqq[ggg] + " " + qqq[ggg+1] + " " + qqq.slice(-ggg-2)[0] + " " + qqq.slice(-ggg-3)[0] + " ")
 		}
 
-		console.log("polyGAPS " + polyGAPS);
-		console.log("pg length " + polyGAPS.length)
+		// console.log("polyGAPS " + polyGAPS);
+		// console.log("pg length " + polyGAPS.length)
 		drawLINE(completeXY, polyGAPS);
 	}
 };
