@@ -27,7 +27,7 @@ function addLINES(){
 
 	var gaps_num = document.getElementsByTagName("polygon").length
 
-	if (gaps_num >=2 | gaps_num == undefined){
+	if (gaps_num >=2){
 		var node = document.getElementById("gap_2");
 			// var elem = document.createElement("polyline");
 		var elem = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
@@ -114,8 +114,8 @@ function whiteOUT(polyGAPS, numPOLYGONS){
 
 			// pg_length = polyGAPS.length
 			var pg = polyGAPS.slice(-1)[0]
-			console.log("pg " + pg)
-			if (pg === undefined){ console.log("a problem..."); return false }
+			// console.log("pg " + pg)
+			if (pg === undefined){ return false }
 			node.setAttribute("points", pg);
 			node.setAttribute("class", "whiteout");
 			polyGAPS.splice(-1)[0]
