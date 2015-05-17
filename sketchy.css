@@ -47,7 +47,6 @@ span.block {
 
 div#results {
 	display: none;
-	background-color: #e6f3f7;
 }
 
 svg {
@@ -64,4 +63,19 @@ svg {
 #swipeBox {
 	height: 100px;
 	width: 200px;
+}
+
+.whiteout {
+/*	fill: white;
+	stroke: white;*/
+	fill: #eee;
+	stroke: #ddd;
+	stroke-width:1
+}
+
+#gap_1 {
+	display: none;
+}
+#in_x_skew {
+	display: none;
 }

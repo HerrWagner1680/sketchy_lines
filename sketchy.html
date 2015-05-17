@@ -80,9 +80,14 @@
 		<span id="x_node_spac">10</span>
 <h5></h5>
 <!-- 		<span id="x_skew">skew max is rounded down integer of half node space...maybe use modulus.... randomly skewing zigs and zags</span> -->
-		<span class="block">random noise</span>
+	<!-- 	<span class="block">random noise</span> -->
 		<input id="in_x_skew" type="range" min="0" max="4" value="2" step="0.2" onchange="showValueSKEW(this.value)" />
-		<span id="x_skew">2</span>
+<!-- 		<span id="x_skew">2</span>
+<h5></h5> -->
+
+		<span class="block">line vanishes below this thickness</span>
+		<input id="in_gaps" type="range" min="0" max="4" value="1" step="0.2" onchange="showValueGAPS(this.value)" />
+		<span id="gaps">1</span>
 <h5></h5>
 
 
@@ -116,13 +121,14 @@
 			document.getElementById("x_skew").innerHTML=newValue;
 		}
 
-		    
+		function showValueGAPS(newValue){
+			document.getElementById("gaps").innerHTML=newValue;
+		}
 
 		//global variable
 
 		maxRIGHT = document.getElementById("in_xright").value;
 		
-
 		// document.getElementById("draw").addEventListener("click", myFunction);
 
 		function myFunction() {
@@ -182,6 +188,9 @@
 	  <line class="lin" id="lin_3" x1="10" y1="50" x2="300" y2="50"/> -->
 
 	  <polyline class="lin" id="poly_1" points="0,0 300,0 300,0 0,0" style="stroke:#fff"/>
+
+	  <polygon class="whiteout" id="gap_1" points="305,0 310,0 310,0 320,0"/>
+	  <!-- style="fill:white;stroke:white;stroke-width:2" -->
 	   Sorry, your browser does not support inline SVG. 
 	</svg> 
 <!-- 	<p> *** NUMBER OF LINES ... number of loops performed</p> -->
